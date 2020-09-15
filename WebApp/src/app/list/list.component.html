@@ -1,35 +1,31 @@
 <div class="tableCollapse">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col" class="date">Date</th>
-            <th scope="col" class="name">List Name</th>
-            <th scope="col" class="entity">No. of Entities</th>
-            <th scope="col" class="actions">Actions</th>
-            <th scope="col" class="detailsHeader"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="dateContent">Otto</td>
-            <td class="nameContent">My Vendors</td>
-            <td class="entityContent">22</td>
-            <td>0</td>
-            <td class="details"><button >Details</button></td>
-          </tr>
-          <tr>
-            <td class="dateContent">Otto</td>
-            <td class="nameContent">My Vendors</td>
-            <td class="entityContent">22</td>
-            <td>
-              <i class="fa fa-envelope-o"></i>
-              <i class="fa fa-share-alt"></i>
-              <i class="fa fa-pencil"></i>
-              <i class="fa fa-trash"></i>
-            </td>
-            <td class="details"><button >Details</button></td>
-          </tr>
-        </tbody>
-      </table>
-    
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="date">Date</th>
+        <th scope="col" class="name">List Name</th>
+        <th scope="col" class="entity">No. of Entities</th>
+        <th scope="col" class="actions">Actions</th>
+        <th scope="col" class="detailsHeader"></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of data">
+      <tr>
+        <td class="dateContent">{{item.date}}</td>
+        <td class="nameContent">{{item.list_name}}</td>
+        <td class="entityContent">{{item.entities}}</td>
+        <td *ngIf="item.entities==0">
+            <i class="fa fa-envelope-o"></i>
+        </td>
+          <td *ngIf="item.entities!=0">
+            <i class="fa fa-envelope-o"></i>
+            <i class="fa fa-share-alt"></i>
+            <i class="fa fa-pencil"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+        <td class="details"><button>Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>

@@ -1,5 +1,5 @@
 .tableCollapse {
-    overflow-y:scroll;
+    overflow-y:auto;
     height: 630px;
     table {
       thead {
@@ -63,7 +63,7 @@
           }
         }
         i {
-          color: #002B42;
+          color: #003f61;
         }
         background-color: #f8f9fa!important;
       }

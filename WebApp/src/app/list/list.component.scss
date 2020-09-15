@@ -1,0 +1,87 @@
+.tableCollapse {
+    overflow-y:scroll;
+    height: 630px;
+    table {
+      thead {
+        th {
+          border-bottom: none !important;
+          font-weight: 500;
+          font-size: 14px;
+          color: #A5A5A5;
+        }
+        .date {
+          text-align: center;
+        }
+        .entity {
+          text-align: right;
+        }
+        .actions {
+          width: 20%;
+        }
+        .detailsHeader {
+          width: 3%;
+        }
+      }
+      tbody {
+        .dateContent {
+          text-align: center;
+          font-weight: normal;
+          font-size: 14px;
+          color: #bbbbb8;
+        }
+        .nameContent {
+          font-weight: 600;
+          font-size: 17px;
+          color: black;
+        }
+        .entityContent {
+          text-align: right;
+          font-size: 14px;
+          color: black;
+        }
+        i {
+          color: #A5A5A5;
+          margin-right: 25px;
+        }
+        .details {  
+          text-align: right;
+          button {
+            background-color: white;
+            border: none;
+            font-size: 14px;
+            color: #002B42;
+            padding-right: 12px;
+            padding-left: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+      tr:hover {
+        .details {
+          button {
+            border-bottom: 3px solid #002B42;
+          }
+        }
+        i {
+          color: #002B42;
+        }
+        background-color: #f8f9fa!important;
+      }
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ACACAC;    
+    border-radius: 10px;
+}

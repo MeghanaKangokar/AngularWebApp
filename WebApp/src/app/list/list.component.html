@@ -11,7 +11,12 @@
     </thead>
     <tbody *ngFor="let item of data | filter:searchTerm">
       <tr>
-        <td class="dateContent">{{item.date}}</td>
+        <td class="dateContent" *ngIf="item.entities==0">
+          <i class="fa fa-circle-o"></i>
+        </td>
+        <td class="dateContent" *ngIf="item.entities!=0">
+          {{item.date}}
+        </td>
         <td class="nameContent" [ngClass]="{'noEntity': item.entities==0}">{{item.list_name}}</td>
         <td class="entityContent">{{item.entities}}</td>
         <td *ngIf="item.entities==0">
@@ -27,5 +32,4 @@
       </tr>
     </tbody>
   </table>
-
 </div>

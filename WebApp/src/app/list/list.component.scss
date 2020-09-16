@@ -33,6 +33,10 @@
           font-weight: normal;
           font-size: 14px;
           color: #bbbbb8;
+          i {
+            color: #A5A5A5;
+            margin-left: 24px;
+          }
         }
         .nameContent {
           font-weight: 600;
@@ -69,6 +73,11 @@
         .details {
           button {
             border-bottom: 3px solid #002B42;
+          }
+        }
+        .dateContent {
+          i {
+            color: #003f61;
           }
         }
         i {

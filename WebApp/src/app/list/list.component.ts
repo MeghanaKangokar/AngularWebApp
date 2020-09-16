@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,115 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  data = [];
+  @Input() data: any[];
+  @Output() selectedItem = new EventEmitter();
+  @Input() searchTerm: any;
   constructor() { }
 
-  ngOnInit(): void {
-    this.data = [
-      {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 1,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 90,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 1,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 22,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 0,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 2,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-     {
-      date: 'Jul 22',
-      list_name: 'Vendor',
-      entities: 54,
-      description: [
-        'company 1', 'company 1', 'company 1', 'company 1', 'company 1'
-      ]
-     },
-    ];
+  ngOnInit(): void {}
+
+  sendListItem(item: any) {
+    this.selectedItem.emit(item);
   }
 }

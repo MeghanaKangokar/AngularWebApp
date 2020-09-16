@@ -1,15 +1,47 @@
-.description {
-    padding: 12px;
-    font-size: 11px;
-    text-align: center;
-    background-color: #f8f9fa;
-    margin: 21px;
-    color: #A5A5A5;
-    font-weight: 600;
-    button {
-        border: none;
+.descriptionMain {
+    overflow-y:auto;
+    height: 630px;
+    .description {
+        padding: 12px;
+        font-size: 12px;
+        text-align: center;
         background-color: #f8f9fa;
-        color: #003f61;
-        font-weight: 700;
+        margin: 21px;
+        color: #A5A5A5;
+        font-weight: 600;
+        button {
+            border: none;
+            background-color: #f8f9fa;
+            color: #003f61;
+            font-weight: 700;
+        }
     }
+    .descriptionInfo {
+        margin: 21px;
+        font-size: 14px;
+        color: #1d93c2;
+        font-weight: 500;
+        ul.no-bullets {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #ACACAC;    
+    border-radius: 10px;
 }

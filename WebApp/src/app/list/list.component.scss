@@ -1,16 +1,20 @@
 .tableCollapse {
     overflow-y:auto;
     height: 630px;
+    border-right: 1px solid #dee2e6 !important;
     table {
+      border-bottom: 1px solid #dee2e6 !important;
       thead {
         th {
           border-bottom: none !important;
+          border-top: none !important;
           font-weight: 500;
           font-size: 14px;
           color: #A5A5A5;
         }
         .date {
           text-align: center;
+          width: 11%;
         }
         .entity {
           text-align: right;
@@ -23,6 +27,7 @@
         }
       }
       tbody {
+        border-top: 1px solid #dee2e6 !important;
         .dateContent {
           text-align: center;
           font-weight: normal;
@@ -33,6 +38,9 @@
           font-weight: 600;
           font-size: 17px;
           color: black;
+        }
+        .noEntity {
+          color:#55B5EB;
         }
         .entityContent {
           text-align: right;
@@ -53,6 +61,7 @@
             padding-right: 12px;
             padding-left: 12px;
             font-weight: 500;
+            border-bottom: 3px solid white;
           }
         }
       }
@@ -69,18 +78,16 @@
       }
     }
 }
-/* width */
+
 ::-webkit-scrollbar {
     width: 11px;
 }
   
-  /* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
-   
-  /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #ACACAC;    
     border-radius: 10px;

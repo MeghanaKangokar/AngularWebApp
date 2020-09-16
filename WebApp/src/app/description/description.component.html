@@ -1,4 +1,11 @@
-<div class="description">
+<div class="descriptionMain">
+  <div class="description">
     <span>No Description Yet</span>
     <span><button>+Add Description</button></span>
+  </div>
+  <div class="descriptionInfo" *ngIf="!(!description)">
+    <ul *ngFor="let desc of description" class="no-bullets">
+      <li>{{desc}}</li>
+    </ul>
+  </div>
 </div>

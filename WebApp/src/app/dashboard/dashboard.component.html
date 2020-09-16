@@ -1,8 +1,8 @@
 <div class="mainContent">
     <div class="list">
-        <app-list></app-list>
+        <app-list [data]="data" [searchTerm]="searchTerm" (selectedItem)="selectedData($event)"></app-list>
     </div>
     <div class="description">
-        <app-description></app-description>
+        <app-description [description]="description"></app-description>
     </div>
 </div>
